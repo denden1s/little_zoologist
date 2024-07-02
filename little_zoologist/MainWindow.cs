@@ -370,6 +370,8 @@ namespace little_zoologist
         private void MainWindow_Load(object sender, EventArgs e)
         {
             //mainPanel = new Panel();
+            mainPanel.Hide();
+
             animals = config.GetAnimals();
             for (int i = carusel * 8; i < animals.Count(); i++)
             {
@@ -387,6 +389,7 @@ namespace little_zoologist
                 SlideAnimalsLeft.Visible = false;
             }
             this.Controls.Add(mainPanel);
+            mainPanel.Show();
         }
     }
 }
